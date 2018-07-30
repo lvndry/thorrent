@@ -1,0 +1,14 @@
+.Home-header {
+	padding: 50px;
+}
+
+.Home-header-title {
+	text-align: center;	
+}
+
+.Home-movies {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 5px 20px 5px 20px;
+	justify-content: center;
+}

@@ -7,7 +7,6 @@ export default class Routes extends Component {
 		return (
 			<Router>
 				<Route path='/' exact component={Home} />
-				{ /* <Route path='/video/:id' component={video} /> */ }
 			</Router>
 		);
 	}
