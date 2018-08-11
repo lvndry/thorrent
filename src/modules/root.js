@@ -1,3 +1,6 @@
-import { combineReducers } from 'react-redux';
+import { combineReducers } from 'redux';
+import movies from './movies/MoviesReducer';
 
-export default combinereducer({})
+export default combineReducers({
+  movies,
+});

@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ],
+  "rules": {
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-tabs": 0,
+    "indent": ["error", "tab"],
+    "react/jsx-indent": [2, 'tab'],
+    "func-names": ["error", "as-needed"]
+  }
+}

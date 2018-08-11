@@ -1,11 +1,18 @@
-import * as MovieClient from './MoviesClient.js';
+import * as MovieClient from './MoviesClient';
+import { MOVIES } from './MovieConstants';
 
 export function getMovies() {
-	return MovieClient.getMovies()
-		.then(movies => movies)
+	return function getMovieThunk(dispatch) {
+		return MovieClient.getMovies()
+			.then(movies => dispatch({
+				type: MOVIES.FETCH_SUCCESS,
+				payload: { movies: movies.results },
+			}));
+	};
 }
 
 export function getPoster(urlPath) {
-	return MovieClient.getPoster(urlPath)
-		.then(poster => poster)
+	return function getPosterThunk() {
+		return MovieClient.getPoster(urlPath);
+	};
 }

@@ -1,0 +1,5 @@
+const MOVIES = {
+	FETCH_SUCCESS: 'MOVIE_FETCH_SUCESS',
+};
+
+export { MOVIES };
