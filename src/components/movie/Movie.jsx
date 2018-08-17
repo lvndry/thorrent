@@ -3,6 +3,17 @@ import Proptypes from 'prop-types';
 import './Movie.css';
 
 export default class Movie extends Component {
+	static propTypes = {
+		title: Proptypes.string,
+		overview: Proptypes.string,
+	};
+
+
+	static defaultProps = {
+		title: '',
+		overview: '',
+	};
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -47,13 +58,3 @@ export default class Movie extends Component {
 		);
 	}
 }
-
-Movie.propTypes = {
-	title: Proptypes.string,
-	overview: Proptypes.string,
-};
-
-Movie.defaultProps = {
-	title: '',
-	overview: '',
-};

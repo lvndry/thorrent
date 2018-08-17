@@ -11,7 +11,9 @@
     "jsx-quotes": ["error", "prefer-single"],
     "no-tabs": 0,
     "indent": ["error", "tab"],
-    "react/jsx-indent": [2, 'tab'],
+    "react/jsx-indent": [2, "tab"],
+    "react/jsx-indent-props": [0, 'tab'],
+    "react/destructuring-assignment": ["error", "never"],
     "func-names": ["error", "as-needed"]
   }
 }
