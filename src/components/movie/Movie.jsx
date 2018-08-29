@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
+
+import { urlPusher } from '../../core/core';
+
 import './Movie.css';
 
 export default class Movie extends Component {
@@ -7,12 +10,14 @@ export default class Movie extends Component {
 		title: Proptypes.string,
 		overview: Proptypes.string,
 		poster_path: Proptypes.string,
+		id: Proptypes.number,
 	};
 
 	static defaultProps = {
 		title: '',
 		overview: '',
 		poster_path: '',
+		id: '',
 	};
 
 	constructor(props) {
@@ -21,6 +26,12 @@ export default class Movie extends Component {
 			visible: false,
 		};
 		this.renderOverview = this.renderOverview.bind(this);
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick() {
+		const url = `/${this.props.id}/play`;
+		urlPusher(url);
 	}
 
 	renderOverview() {
@@ -43,6 +54,9 @@ export default class Movie extends Component {
 					className='Movie-attributes'
 					onMouseEnter={this.renderOverview}
 					onMouseLeave={this.renderOverview}
+					onClick={this.handleClick}
+					role='gridcell'
+					tabIndex={0}
 				>
 					<img
 						src={`https://image.tmdb.org/t/p/w500/${poster_path}`}

@@ -17,6 +17,7 @@
     "func-names": ["off", "as-needed"],
     "react/prefer-stateless-function": [0, { ignorePureComponents: true }],
     "react/require-default-props": [1],
-    "import/prefer-default-export": ["off"]
+    "import/prefer-default-export": ["off"],
+    "jsx-ally/click-events-have-key-events": ["off"]
   }
 }
