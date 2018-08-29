@@ -6,12 +6,13 @@ export default class Movie extends Component {
 	static propTypes = {
 		title: Proptypes.string,
 		overview: Proptypes.string,
+		poster_path: Proptypes.string,
 	};
-
 
 	static defaultProps = {
 		title: '',
 		overview: '',
+		poster_path: '',
 	};
 
 	constructor(props) {
@@ -23,7 +24,7 @@ export default class Movie extends Component {
 	}
 
 	renderOverview() {
-		this.setState({ visible: !this.state.visible })
+		this.setState(prevState => ({ visible: !prevState.visible }));
 	}
 
 	render() {

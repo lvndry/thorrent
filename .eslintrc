@@ -13,7 +13,10 @@
     "indent": ["error", "tab"],
     "react/jsx-indent": [2, "tab"],
     "react/jsx-indent-props": [0, 'tab'],
-    "react/destructuring-assignment": ["error", "never"],
-    "func-names": ["error", "as-needed"]
+    "react/destructuring-assignment": ["off", "never"],
+    "func-names": ["off", "as-needed"],
+    "react/prefer-stateless-function": [0, { ignorePureComponents: true }],
+    "react/require-default-props": [1],
+    "import/prefer-default-export": ["off"]
   }
 }
